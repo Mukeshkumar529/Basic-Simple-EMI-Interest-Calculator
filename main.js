@@ -29,7 +29,7 @@ calcBtn.addEventListener("click", () => {
     const result = parseFloat(p * i * t) / 100;
     const totalAmmountValue = parseFloat(result + p);
 
-    const monthlyInterestRate = parseFloat(i/ (100 * 12));
+    const monthlyInterestRate = parseFloat(result/ 12) ;
 
     const emi =
       (p * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, t)) /
