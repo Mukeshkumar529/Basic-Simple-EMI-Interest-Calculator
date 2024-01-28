@@ -38,7 +38,7 @@ calcBtn.addEventListener("click", () => {
     montlyInterest.style.display = "block";
     emi_section.style.display = "block";
 
-    monthlyInterest_Ammount.value = oneMonthInterest;
+    monthlyInterest_Ammount.value = oneMonthInterest; 
 
     Emi_Ammount.value = Math.round(parseFloat((p + result) / t));
 
