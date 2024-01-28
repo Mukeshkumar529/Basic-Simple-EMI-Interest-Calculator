@@ -29,24 +29,21 @@ calcBtn.addEventListener("click", () => {
     const result = parseFloat(p * i * t) / 100;
     const totalAmmountValue = parseFloat(p + result);
 
-    const monthlyInterestRate1 = i / 100 / 12;
+    const oneMonthInterest = p * (i / 100);
 
-    const emi = Math.round(
-      (p * monthlyInterestRate1 * Math.pow(1 + monthlyInterestRate1, t)) /
-        (Math.pow(1 + monthlyInterestRate1, t) - 1)
-    );
+    const emi = Math.round(oneMonthInterest * t);
 
     interestValue.style.display = "block";
     totalResult.style.display = "block";
     montlyInterest.style.display = "block";
     emi_section.style.display = "block";
 
-    monthlyInterest_Ammount.value = Math.round(emi - p / t);
+    monthlyInterest_Ammount.value = oneMonthInterest;
 
-    Emi_Ammount.value = emi.toFixed(2);
+    Emi_Ammount.value = (p + result) / t;
 
-    resultValue.value = emi * t - p;
-    totalAmmount.value = emi * t;
+    resultValue.value = result;
+    totalAmmount.value = p + result;
   }
 });
 
