@@ -27,25 +27,26 @@ calcBtn.addEventListener("click", () => {
     return;
   } else {
     const result = parseFloat(p * i * t) / 100;
-    const totalAmmountValue = parseFloat(result + p);
+    const totalAmmountValue = parseFloat(p + result);
 
-    const monthlyInterestRate = parseFloat(result/ (100 *12)) ;
+    const monthlyInterestRate1 = i / 100 / 12;
 
-    const emi =
-      (p * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, t)) /
-      (Math.pow(1 + monthlyInterestRate, t) - 1);
+    const emi = Math.round(
+      (p * monthlyInterestRate1 * Math.pow(1 + monthlyInterestRate1, t)) /
+        (Math.pow(1 + monthlyInterestRate1, t) - 1)
+    );
 
     interestValue.style.display = "block";
     totalResult.style.display = "block";
     montlyInterest.style.display = "block";
     emi_section.style.display = "block";
 
-    monthlyInterest_Ammount.value = parseInt(result / 12);
+    monthlyInterest_Ammount.value = Math.round(emi - p / t);
 
-    Emi_Ammount.value = emi;
+    Emi_Ammount.value = emi.toFixed(2);
 
-    resultValue.value = result;
-    totalAmmount.value = totalAmmountValue;
+    resultValue.value = emi * t - p;
+    totalAmmount.value = emi * t;
   }
 });
 
@@ -54,7 +55,6 @@ ResetBtn.addEventListener("click", () => {
   totalResult.style.display = "none";
   montlyInterest.style.display = "none";
   emi_section.style.display = "none";
-
   p_ammout.value = "";
   interest_ammount.value = "";
   duration.value = "";
