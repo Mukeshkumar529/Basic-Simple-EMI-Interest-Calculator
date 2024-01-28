@@ -15,9 +15,9 @@ let montlyInterest = document.querySelector(".MonthlyInterest");
 let emi_section = document.querySelector(".EMI");
 
 calcBtn.addEventListener("click", () => {
-  const p = parseInt(p_ammout.value);
-  const i = parseInt(interest_ammount.value);
-  const t = parseInt(duration.value);
+  const p = parseFloat(p_ammout.value);
+  const i = parseFloat(interest_ammount.value);
+  const t = parseFloat(duration.value);
 
   // validate input
   if (isNaN(p) || isNaN(i) || isNaN(t) || p <= 0 || i <= 0 || t <= 0) {
@@ -26,10 +26,10 @@ calcBtn.addEventListener("click", () => {
     );
     return;
   } else {
-    const result = parseFloat(p * i * t) / 100;
-    const totalAmmountValue = parseFloat(p + result);
+    const result = Math.round(parseFloat(p * i * t) / 100);
+    const totalAmmountValue = Math.round(parseFloat(p + result));
 
-    const oneMonthInterest = p * (i / 100);
+    const oneMonthInterest = Math.round(p * (i / 100));
 
     const emi = Math.round(oneMonthInterest * t);
 
@@ -40,10 +40,10 @@ calcBtn.addEventListener("click", () => {
 
     monthlyInterest_Ammount.value = oneMonthInterest;
 
-    Emi_Ammount.value = (p + result) / t;
+    Emi_Ammount.value = Math.round(parseFloat((p + result) / t));
 
     resultValue.value = result;
-    totalAmmount.value = p + result;
+    totalAmmount.value = totalAmmountValue;
   }
 });
 
