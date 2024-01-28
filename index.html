@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <video id="v-bg" autoplay loop muted>
+      <source src="./bg.mp4" type="video/mp4" />
+    </video>
+    <section id="CalcFrame">
+      <div id="MainBox">
+        <h1>SIMPLE INTEREST CALCULATOR</h1>
+        <form action="#">
+          <div class="p_ammount">
+            <label for="Principle Ammount"
+              >Principle Ammount : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp;
+              <input
+                type="number"
+                placeholder="Please Enter Principle Ammount"
+                id="main_ammount"
+              />
+            </label>
+          </div>
+
+          <div class="rateof_interest">
+            <label for="RateofInterest">
+              Rate Of Interest In (%) :&nbsp; &nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input
+                <input
+                <input
+                <input
+                <input
+                type="number"
+                placeholder="Please Enter a Rate of Interest"
+                id="interest_Rate"
+              />
+            </label>
+          </div>
+
+          <div class="duration_of_time">
+            <label for="Duration_Year"
+              >Duration (In Month ): &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;
+              <input
+                type="number"
+                placeholder="Enter Duration of Year In Number"
+                id="time_Duration"
+              />
+            </label>
+          </div>
+
+          <div class="CalculateBtn">
+            <button id="Calc_Btn">CALCULATE</button>
+            <button id="Clear_Btn">RESET</button>
+          </div>
+
+          <div class="totalInterest">
+            <label for="InterestAmmount" class="result_Label">
+              INTEREST &nbsp; AMMOUNT &nbsp; &nbsp;=
+            </label>
+            <input type="Number" id="resultValue" disabled />
+          </div>
+          <div class="MonthlyInterest">
+            <label for="monthly interest" class="result_Label">
+              MONTHLY INTEREST &nbsp; AMMOUNT &nbsp; &nbsp;=
+            </label>
+            <input type="Number" id="monthly_Interest_Value" disabled />
+          </div>
+
+          <div class="EMI">
+            <label for="InterestAmmount" class="result_Label">
+              EMI &nbsp; AMMOUNT &nbsp; &nbsp;=
+            </label>
+            <input type="Number" id="EMI_Ammount" disabled />
+          </div>
+
+          <div class="totalAmmount">
+            <label for="TotalAmmount" class="result_Label">
+              TOTAL &nbsp; AMMOUNT &nbsp; &nbsp;= &nbsp; &nbsp; &nbsp;
+            </label>
+            <input type="Number" id="totalValue" disabled />
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+  <script src="./main.js"></script>
+</html>

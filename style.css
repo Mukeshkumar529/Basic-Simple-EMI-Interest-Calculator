@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #2e2e4e;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#v-bg {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -6;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 20px 0px 0px 440px;
+  justify-content: center;
+  align-items: center;
+}
+
+#CalcFrame {
+  width: 80%;
+  height: 60vw;
+  background-color: #151212;
+  justify-content: center;
+  margin-left: 10%;
+  margin-top: 4%;
+  border-radius: 4px;
+  padding: 2%;
+}
+
+#MainBox h1 {
+  color: #fff9f9;
+  font-size: 18px;
+  padding: 2%;
+}
+
+form {
+  display: flex;
+  width: 80%;
+  height: 60%;
+  color: aliceblue;
+  flex-direction: column;
+  padding: 6%;
+  background-color: #442859;
+  margin-left: 4%;
+  margin-top: 2%;
+  text-align: left;
+}
+
+.p_ammount {
+  background-color: #efe2e8;
+  color: #4c194a;
+  padding-left: 4%;
+  border-radius: 6px;
+}
+
+.rateof_interest {
+  background-color: #efe2e8;
+  color: #4c194a;
+  margin-top: 1%;
+  padding-left: 4%;
+  border-radius: 6px;
+}
+.duration_of_time {
+  background-color: #efe2e8;
+  margin-top: 1%;
+  color: #4c194a;
+  margin-bottom: 2%;
+  padding-left: 4%;
+  border-radius: 6px;
+}
+input {
+  width: 55%;
+  height: 50px;
+  margin: 10px 0px 20px 20px;
+  outline: none;
+  padding-left: 10px;
+  background-color: #32323b;
+  color: #e2e22e;
+  border: none;
+  border-radius: 4px;
+  font-size: 24px;
+}
+input::placeholder {
+  color: aliceblue;
+}
+label {
+  font-size: 24px;
+}
+
+button {
+  width: 20%;
+  height: 40px;
+  background-color: #65f765;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #212121;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+button:hover {
+  background-color: rgb(231, 77, 105);
+  color: aliceblue;
+}
+
+#Clear_Btn {
+  background-color: #e2e22e;
+  margin-left: 2%;
+}
+
+#Clear_Btn:hover {
+  background-color: #de2ede;
+  color: #c3c3df;
+}
+.totalInterest {
+  display: none;
+  margin-left: 30%;
+  margin-top: 1%;
+}
+
+.totalInterest label {
+  font-size: 14px;
+}
+.totalInterest input {
+  width: 60%;
+  height: 40px;
+  background-color: #2e2e4e;
+  border: none;
+  color: #00e070;
+  border-radius: 8px;
+  outline: none;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.result_Label {
+  margin-top: 4.5%;
+}
+
+.totalAmmount {
+  display: none;
+  margin-left: 30%;
+  margin-top: 1%;
+}
+
+.totalAmmount input {
+  width: 59%;
+  height: 40px;
+  background-color: #2e2e4e;
+  border: none;
+  color: #00e070;
+  border-radius: 8px;
+  outline: none;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.totalAmmount label {
+  font-size: 14px;
+}
+
+.MonthlyInterest {
+  display: none;
+  margin-left: 20%;
+  margin-top: 1%;
+}
+
+.MonthlyInterest input {
+  width: 53%;
+  height: 40px;
+  background-color: #2e2e4e;
+  border: none;
+  color: #00e070;
+  border-radius: 8px;
+  outline: none;
+  font-size: 24px;
+  margin-left: 5%;
+  padding-left: 20px;
+}
+
+.MonthlyInterest label {
+  font-size: 14px;
+}
+
+.EMI {
+  display: none;
+  margin-left: 30%;
+  margin-top: 1%;
+}
+
+.EMI input {
+  width: 60%;
+  height: 40px;
+  background-color: #2e2e4e;
+  border: none;
+  color: #00e070;
+  border-radius: 8px;
+  outline: none;
+  font-size: 24px;
+  margin-left: 8%;
+  padding-left: 20px;
+}
+
+.EMI label {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  section {
+    margin: 20px 40pxpx 10px 50px;
+  }
+
+  #CalcFrame {
+    width: 90%;
+    height: 290vw;
+    margin-left: 3%;
+    margin-top: 8%;
+    padding: 2%;
+    margin-bottom: 8%;
+  }
+
+  form {
+    width: 95%;
+    height: 240vw;
+    padding: 2%;
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    text-align: left;
+  }
+
+  .p_ammount {
+    padding-left: 6%;
+    border-radius: 6px;
+    margin-top: 4%;
+  }
+
+  .rateof_interest {
+    margin-top: 4%;
+    padding-left: 6%;
+  }
+  .duration_of_time {
+    margin-top: 4%;
+    margin-bottom: 8%;
+    padding-left: 6%;
+  }
+
+  input {
+    width: 95%;
+    height: 60px;
+    margin: 10px 0px 20px 0px;
+    padding-left: 6px;
+    background-color: #32323b;
+  }
+
+  input::placeholder {
+    font-size: 16px;
+  }
+  button {
+    width: 40%;
+    height: 40px;
+  }
+
+  .CalculateBtn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .totalInterest {
+    margin-left: 5%;
+    margin-top: 8%;
+  }
+
+  .totalInterest label {
+    font-size: 14px;
+  }
+  .totalInterest input {
+    width: 95%;
+    height: 60px;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  .totalAmmount {
+    margin-left: 5%;
+    margin-top: 1%;
+  }
+
+  .totalAmmount input {
+    width: 95%;
+    height: 60px;
+    padding-left: 20px;
+  }
+
+  .MonthlyInterest {
+    margin-left: 5%;
+    margin-top: 1%;
+  }
+
+  .MonthlyInterest input {
+    width: 95%;
+    height: 60px;
+    margin-left: 0%;
+    padding-left: 20px;
+  }
+
+  .EMI {
+    margin-left: 5%;
+    margin-top: 1%;
+  }
+
+  .EMI input {
+    width: 95%;
+    height: 60px;
+    margin-left: 0%;
+    padding-left: 20px;
+  }
+}
