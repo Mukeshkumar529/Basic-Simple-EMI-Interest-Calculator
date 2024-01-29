@@ -280,7 +280,7 @@ button:hover {
   }
 
   input::placeholder {
-    font-size: 16px;
+    font-size: 14px;
   }
   button {
     width: 40%;
@@ -293,7 +293,7 @@ button:hover {
   }
 
   .totalInterest {
-    margin-left: 5%;
+    margin-left: 2%;
     margin-top: 8%;
   }
 
@@ -301,44 +301,45 @@ button:hover {
     font-size: 14px;
   }
   .totalInterest input {
-    width: 95%;
+    width: 80%;
     height: 60px;
     font-size: 24px;
     padding-left: 20px;
+    margin-left: 12%;
   }
 
   .totalAmmount {
-    margin-left: 5%;
+    margin-left: 2%;
     margin-top: 1%;
   }
 
   .totalAmmount input {
-    width: 95%;
+    width: 80%;
     height: 60px;
     padding-left: 20px;
   }
 
   .MonthlyInterest {
-    margin-left: 5%;
+    margin-left: 2%;
     margin-top: 1%;
   }
 
   .MonthlyInterest input {
-    width: 95%;
+    width: 80%;
     height: 60px;
-    margin-left: 0%;
     padding-left: 20px;
+    margin-left: 12%;
   }
 
   .EMI {
-    margin-left: 5%;
+    margin-left: 2%;
     margin-top: 1%;
   }
 
   .EMI input {
-    width: 95%;
+    width: 80%;
     height: 60px;
-    margin-left: 0%;
     padding-left: 20px;
+    margin-left: 12%;
   }
 }
